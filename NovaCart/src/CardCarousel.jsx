@@ -104,7 +104,7 @@ const CardCarousel = () => {
           >
             <div style={{ textAlign: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)', padding: '20px', borderRadius: '10px' }}>
                     <h3 style={{ fontSize: '2rem', fontWeight: 'bold' }}>{card.title}</h3>
-                    <img src='background5' style={{height:'335px' ,width:'1330px'}}></img>
+                    <img src={background5} style={{height:'335px' ,width:'1330px'}}></img>
               <p style={{ fontSize: '1.5rem' }}>{card.description}</p>
             </div>
           </div>
