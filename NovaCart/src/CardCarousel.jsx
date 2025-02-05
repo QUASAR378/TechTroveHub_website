@@ -58,21 +58,21 @@ const CardCarousel = () => {
   const cards = [
     {
       title: "Unity",
-      description: "Football brings people together.",
+      description: "Cycling brings people together.",
       background: background1, 
     },
     {
       title: "Team Spirit",
-      description: "Camaraderie in every match.",
+      description: "Camaraderie in every ride.",
       background: background2,
     },
     {
       title: "Inclusivity",
-      description: "Breaking barriers with football.  A library for writing CSS directly within your JavaScript files in a React project. It allows you to create styled components by using ES6 template literals, which makes your styles more modular and scoped to specific components.  ",
+      description: "Breaking barriers with cycling.",
       background: background3,
     },
     {
-      title: "Beyond the Game",
+      title: "Beyond the Road",
       description: "Inspiring social change.",
       background: background4,
     },

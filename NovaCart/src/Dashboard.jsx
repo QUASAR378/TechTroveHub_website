@@ -1,14 +1,35 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
   };
 
   const handleOptionClick = (option) => {
-    console.log(option); // Put your code that handles what happens when you click on the contents of the menu. Kama mtaona code in the first place hehehehe
+    // Navigate based on the option selected
+    switch (option) {
+      case 'Stories':
+        navigate('/stories');
+        break;
+      case 'Products':
+        navigate('/products');
+        break;
+      case 'Related':
+        navigate('/related');
+        break;
+      case 'About':
+        navigate('/about');
+        break;
+      case 'Footer':
+        navigate('/contact'); // Assuming you want to navigate to a contact page
+        break;
+      default:
+        console.log(option);
+    }
     setDropdownOpen(false);
   };
 
@@ -28,19 +49,19 @@ const Dashboard = () => {
               Sign In
             </div>
             <div onClick={() => handleOptionClick('Stories')} style={styles.dropdownItem}>
-                Stories
+              Stories
             </div>
             <div onClick={() => handleOptionClick('Products')} style={styles.dropdownItem}>
-                Products
+              Products
             </div>
             <div onClick={() => handleOptionClick('Related')} style={styles.dropdownItem}>
-                Related
+              Related
             </div>
             <div onClick={() => handleOptionClick('About')} style={styles.dropdownItem}>
-                About
+              About us
             </div>
             <div onClick={() => handleOptionClick('Footer')} style={styles.dropdownItem}>
-                Get in Touch
+              Get in Touch
             </div>
           </div>
         )}
@@ -57,9 +78,7 @@ const styles = {
     justifyContent: 'center',
     height: '20vh',
     backgroundColor: '#f0f0f0',
-    //fontFamily: 'Arial, sans-serif',
     transition: 'background-color 0.3s ease',
-    
   },
   title: {
     fontSize: '2rem',

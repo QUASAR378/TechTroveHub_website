@@ -32,6 +32,13 @@ const styles = {
         listStyleType: 'none',
         padding: 0,
     },
+    header: {
+        width: '100%',
+        textAlign: 'center',
+        fontSize: '2em',
+        margin: '20px 0',
+        color: '#333',
+    },
 };
 
 const products = [
@@ -80,6 +87,7 @@ const products = [
 const Products = () => {
     return (
         <div style={styles.productsContainer}>
+            <h1 style={styles.header}>Products</h1> {/* Added Header */}
             {products.map(product => (
                 <div key={product.id} style={styles.productCard}>
                     <h2 style={styles.productCardTitle}>{product.name}</h2>
